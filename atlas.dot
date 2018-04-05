@@ -1,0 +1,62 @@
+graph {
+  subgraph cluster_01 {
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+      <tr><td align="right" port="i1">Blue - Bonus Complete</td></tr>
+      <tr><td align="right" port="i2">Green - Complete</td></tr>
+      </table>>]
+    }
+
+  beach_1  [shape=box, style=filled, fillcolor=deepskyblue];
+  dungeon_1 [shape=box, style=filled, fillcolor=deepskyblue];
+  graveyard_1 [shape=box, style=filled, fillcolor=green];
+  lookout_1 [shape=box, style=filled, fillcolor=deepskyblue];
+
+  alleyways_2;
+  arid_lake_2 [style=filled, fillcolor=deepskyblue];
+  desert_2 [style=filled, fillcolor=deepskyblue];
+  flooded_mine_2 [style=filled, fillcolor=deepskyblue];
+  marshes_2;
+  pen_2;
+
+  arcade_3;
+  cage_3;
+  cells_3;
+  excavation_3;
+  iceberg_3 [style=filled, fillcolor=green];
+  leyline_3;
+  peninsula_3;
+  port_3 [style=filled, fillcolor=green];
+
+  lighthouse_4;
+  strand_4;
+  whakawairu_4;
+
+  ivory_temple_5;
+
+  fields_6;
+
+  beach_1 -- desert_2;
+  beach_1 -- arid_lake_2;
+  dungeon_1 -- flooded_mine_2;
+  graveyard_1 -- marshes_2;
+  lookout_1 -- alleyways_2;
+  lookout_1 -- pen_2;
+
+  alleyways_2 -- arcade_3;
+  alleyways_2 -- cage_3;
+  alleyways_2 -- port_3;
+  arid_lake_2 -- peninsula_3;
+  desert_2 -- iceberg_3;
+  flooded_mine_2 -- leyline_3;
+  flooded_mine_2 -- excavation_3;
+  flooded_mine_2 -- cells_3;
+
+  iceberg_3 -- strand_4;
+  port_3 -- lighthouse_4;
+  strand_4 -- whakawairu_4;
+
+  lighthouse_4 -- ivory_temple_5;
+
+}
