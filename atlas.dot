@@ -1,13 +1,4 @@
 graph {
-  subgraph cluster_01 {
-    node [shape=plaintext]
-    label = "Legend";
-    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
-      <tr><td align="right" port="i1">Blue - Bonus Complete</td></tr>
-      <tr><td align="right" port="i2">Green - Complete</td></tr>
-      </table>>]
-    }
-
   UL_dungeon_1 [shape=box, style=filled, fillcolor=lightblue];
   UR_beach_1  [shape=box, style=filled, fillcolor=lightblue];
   LL_graveyard_1 [shape=box, style=filled, fillcolor=lightblue];
@@ -18,20 +9,23 @@ graph {
   desert_2 [style=filled, fillcolor=lightblue];
   flooded_mine_2 [style=filled, fillcolor=lightblue];
   marshes_2 [style=filled, fillcolor=darkseagreen1];
-  pen_2;
+  pen_2 [style=filled, fillcolor=lightblue];
 
   arcade_3 [style=filled, fillcolor=lightblue];
-  cage_3;
+  cage_3 [style=filled, fillcolor=lightblue];
   cells_3;
   excavation_3;
   iceberg_3 [style=filled, fillcolor=darkseagreen1];
   leyline_3;
   peninsula_3;
   port_3 [style=filled, fillcolor=darkseagreen1];
+  springs_3;
 
   canyon_4;
+  chateau_4;
   courthouse_4;
   lighthouse_4;
+  gorge_4;
   grotto_4;
   strand_4;
   whakawairu_4;
@@ -40,64 +34,117 @@ graph {
   channel_5 [style=filled, fillcolor=lightblue];
   ivory_temple_5 [style=filled, fillcolor=lightblue];
   maze_5;
-  spider_lair_5;
+  spider_lair_5 [shape=box, style=filled, fillcolor=lightblue];
+  toxic_sewers_5;
 
   atoll_6;
   fields_6;
   jungle_valley_6;
+  phantasmogoria_6 [style=filled, fillcolor=darkseagreen1];
+  shaped_beach_6 [style=filled, fillcolor=lightblue];
   thicket_6 [style=filled, fillcolor=lightblue];
   underground_sea_6;
   wharf_6;
 
   arachnid_nest_7;
   bazaar_7;
+  bone_crypt_7 [style=filled, fillcolor=darkseagreen1];
+  coral_ruins_7;
+  dunes_7 [style=filled, fillcolor=darkseagreen1];
+  pillars_of_arun_7;
   ramparts_7;
 
   laboratory_8;
+  mao_kun_8;
+  mud_geyser_8;
+  shaped_iceberg_8 [style=filled, fillcolor=darkseagreen1];
+  shore_8;
 
-  UR_beach_1 -- desert_2;
-  UR_beach_1 -- arid_lake_2;
-  UL_dungeon_1 -- flooded_mine_2;
-  LL_graveyard_1 -- marshes_2;
-  LR_lookout_1 -- alleyways_2;
-  LR_lookout_1 -- pen_2;
+  tower_9;
 
-  alleyways_2 -- arcade_3;
-  alleyways_2 -- cage_3;
-  alleyways_2 -- port_3;
-  arid_lake_2 -- peninsula_3;
-  desert_2 -- iceberg_3;
-  flooded_mine_2 -- leyline_3;
-  flooded_mine_2 -- excavation_3;
-  flooded_mine_2 -- cells_3;
-  pen_2 -- cage_3;
+  precinct_10;
 
-  arcade_3 -- courthouse_4;
-  cells_3 -- grotto_4;
-  iceberg_3 -- strand_4;
-  peninsula_3 -- strand_4;
-  port_3 -- lighthouse_4;
+  olmecs_sanctum;
 
-  canyon_4 -- spider_lair_5;
-  courthouse_4 -- ivory_temple_5;
-  grotto_4 -- channel_5;
-  grotto_4 -- maze_5;
-  lighthouse_4 -- ivory_temple_5;
-  strand_4 -- ancient_city_5;
-  strand_4 -- whakawairu_4;
+  subgraph cluster_01 {
+    node [shape=plaintext]
+    label = "Legend";
+    key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+      <tr><td align="right" port="i1">Blue - Bonus Complete</td></tr>
+      <tr><td align="right" port="i2">Green - Complete</td></tr>
+      </table>>]
+  }
 
-  ancient_city_5 -- fields_6;
-  ivory_temple_5 -- thicket_6;
-  ivory_temple_5 -- wharf_6;
-  maze_5 -- underground_sea_6;
-  spider_lair_5 -- thicket_6;
-  spider_lair_5 -- jungle_valley_6;
+  subgraph cluster_02 {
+    UL_dungeon_1 -- flooded_mine_2;
+    flooded_mine_2 -- leyline_3;
+    flooded_mine_2 -- excavation_3;
+    flooded_mine_2 -- cells_3;
+    cells_3 -- grotto_4;
+    excavation_3 -- gorge_4;
+    excavation_3 -- grotto_4;
+    leyline_3 -- gorge_4;
+    gorge_4 -- channel_5;
+    grotto_4 -- channel_5;
+    grotto_4 -- maze_5;
+    maze_5 -- underground_sea_6;
+    atoll_6 -- ramparts_7;
+    underground_sea_6 -- ramparts_7;
+  }
 
-  atoll_6 -- ramparts_7;
-  thicket_6 -- arachnid_nest_7;
-  underground_sea_6 -- ramparts_7;
-  wharf_6 -- bazaar_7;
+  subgraph cluster_03 {
+    UR_beach_1 -- desert_2;
+    UR_beach_1 -- arid_lake_2;
+    arid_lake_2 -- peninsula_3;
+    desert_2 -- iceberg_3;
+    iceberg_3 -- strand_4;
+    peninsula_3 -- canyon_4;
+    peninsula_3 -- strand_4;
+    strand_4 -- ancient_city_5;
+    strand_4 -- whakawairu_4;
+    ancient_city_5 -- fields_6;
+  }
 
-  bazaar_7 -- laboratory_8;
+  subgraph cluster_04 {
+    shaped_beach_6;
+    shaped_iceberg_8;
+    LL_graveyard_1 -- marshes_2;
+    marshes_2 -- springs_3;
+    springs_3 -- chateau_4;
+    chateau_4 -- toxic_sewers_5;
+    toxic_sewers_5 -- phantasmogoria_6;
+    phantasmogoria_6 -- dunes_7;
+    dunes_7 -- mud_geyser_8;
+    dunes_7 -- pillars_of_arun_7;
+    dunes_7 -- shore_8;
+    bone_crypt_7 -- mud_geyser_8;
+    bone_crypt_7 -- olmecs_sanctum;
+    mao_kun_8 -- shore_8;
+    shore_8 -- tower_9;
+    tower_9 -- precinct_10;
+  }
+
+  subgraph cluster_05 {
+    LR_lookout_1 -- alleyways_2;
+    LR_lookout_1 -- pen_2;
+    alleyways_2 -- arcade_3;
+    alleyways_2 -- cage_3;
+    alleyways_2 -- port_3;
+    pen_2 -- cage_3;
+    arcade_3 -- courthouse_4;
+    port_3 -- lighthouse_4;
+    canyon_4 -- spider_lair_5;
+    courthouse_4 -- ivory_temple_5;
+    lighthouse_4 -- ivory_temple_5;
+    ivory_temple_5 -- thicket_6;
+    ivory_temple_5 -- wharf_6;
+    spider_lair_5 -- fields_6;
+    spider_lair_5 -- thicket_6;
+    spider_lair_5 -- jungle_valley_6;
+    jungle_valley_6 -- coral_ruins_7;
+    thicket_6 -- arachnid_nest_7;
+    wharf_6 -- bazaar_7;
+    bazaar_7 -- laboratory_8;
+  }
 
 }
