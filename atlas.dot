@@ -22,24 +22,32 @@ graph {
   springs_3;
 
   canyon_4;
-  chateau_4;
+  chateau_4 [style=filled, fillcolor=lightblue];
   courthouse_4;
   lighthouse_4;
   gorge_4;
   grotto_4;
+  relic_chambers_4;
   strand_4;
   whakawairu_4;
 
   ancient_city_5 [style=filled, fillcolor=lightblue];
+  barrows_5 [style=filled, fillcolor=lightblue];
   channel_5 [style=filled, fillcolor=lightblue];
   ivory_temple_5 [style=filled, fillcolor=lightblue];
   maze_5;
   spider_lair_5 [shape=box, style=filled, fillcolor=lightblue];
+  sulphur_vents_5;
   toxic_sewers_5;
 
+  ashen_wood_6 [style=filled, fillcolor=darkseagreen1];
   atoll_6;
+  cemetary_6;
   fields_6;
+  hallowed_ground_6;
   jungle_valley_6;
+  masoleum_6;
+  maelstrom_of_chaos_6;
   phantasmogoria_6 [style=filled, fillcolor=darkseagreen1];
   shaped_beach_6 [style=filled, fillcolor=lightblue];
   thicket_6 [style=filled, fillcolor=lightblue];
@@ -51,6 +59,8 @@ graph {
   bone_crypt_7 [style=filled, fillcolor=darkseagreen1];
   coral_ruins_7;
   dunes_7 [style=filled, fillcolor=darkseagreen1];
+  lava_chambers_7;
+  olmecs_sanctum_7;
   pillars_of_arun_7;
   ramparts_7;
 
@@ -64,7 +74,7 @@ graph {
 
   precinct_10;
 
-  olmecs_sanctum;
+  promenade_11;
 
   subgraph cluster_01 {
     node [shape=plaintext]
@@ -85,10 +95,13 @@ graph {
     excavation_3 -- grotto_4;
     leyline_3 -- gorge_4;
     gorge_4 -- channel_5;
+    gorge_4 -- sulphur_vents_5;
     grotto_4 -- channel_5;
     grotto_4 -- maze_5;
     maze_5 -- underground_sea_6;
+    sulphur_vents_5 -- ashen_wood_6;
     atoll_6 -- ramparts_7;
+    atoll_6 -- maelstrom_of_chaos_6;
     underground_sea_6 -- ramparts_7;
   }
 
@@ -111,17 +124,27 @@ graph {
     LL_graveyard_1 -- marshes_2;
     marshes_2 -- springs_3;
     springs_3 -- chateau_4;
+    chateau_4 -- relic_chambers_4;
     chateau_4 -- toxic_sewers_5;
+    relic_chambers_4 -- barrows_5;
+    barrows_5 -- ashen_wood_6;
+    barrows_5 -- cemetary_6;
+    barrows_5 -- masoleum_6;
     toxic_sewers_5 -- phantasmogoria_6;
+    ashen_wood_6 -- lava_chambers_7;
+    cemetary_6 -- bone_crypt_7;
+    cemetary_6 -- hallowed_ground_6;
+    masoleum_6 -- lava_chambers_7;
     phantasmogoria_6 -- dunes_7;
     dunes_7 -- mud_geyser_8;
     dunes_7 -- pillars_of_arun_7;
     dunes_7 -- shore_8;
     bone_crypt_7 -- mud_geyser_8;
-    bone_crypt_7 -- olmecs_sanctum;
+    bone_crypt_7 -- olmecs_sanctum_7;
     mao_kun_8 -- shore_8;
     shore_8 -- tower_9;
     tower_9 -- precinct_10;
+    precinct_10 -- promenade_11;
   }
 
   subgraph cluster_05 {
