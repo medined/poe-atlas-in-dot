@@ -1,2 +1,2 @@
-dot -Tpng atlas.dot -o atlas.png
-firefox atlas.png
+dot -Tpng atlas.dot.txt -o atlas.png
+#firefox atlas.png

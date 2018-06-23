@@ -13,35 +13,39 @@ graph {
 
   arcade_3 [style=filled, fillcolor=lightblue];
   cage_3 [style=filled, fillcolor=lightblue];
-  cells_3;
-  excavation_3;
-  iceberg_3 [style=filled, fillcolor=darkseagreen1];
-  leyline_3;
-  peninsula_3;
-  port_3 [style=filled, fillcolor=darkseagreen1];
-  springs_3;
+  cells_3 [style=filled, fillcolor=lightblue];
+  excavation_3 [style=filled, fillcolor=lightblue];
+  iceberg_3 [style=filled, fillcolor=lightblue];
+  leyline_3 [style=filled, fillcolor=lightblue];
+  peninsula_3 [style=filled, fillcolor=lightblue];
+  port_3 [style=filled, fillcolor=lightblue];
+  springs_3 [style=filled, fillcolor=lightblue];
 
-  canyon_4;
+  canyon_4 [style=filled, fillcolor=lightblue];
   chateau_4 [style=filled, fillcolor=lightblue];
-  courthouse_4;
+  city_square_4;
+  courthouse_4 [style=filled, fillcolor=lightblue];
   lighthouse_4;
   gorge_4;
   grotto_4;
   relic_chambers_4;
-  strand_4;
+  strand_4 [style=filled, fillcolor=lightblue];
   whakawairu_4;
 
   ancient_city_5 [style=filled, fillcolor=lightblue];
   barrows_5 [style=filled, fillcolor=lightblue];
   channel_5 [style=filled, fillcolor=lightblue];
+  conservatory_5;
+  haunted_mansion_5;
   ivory_temple_5 [style=filled, fillcolor=lightblue];
   maze_5;
   spider_lair_5 [shape=box, style=filled, fillcolor=lightblue];
-  sulphur_vents_5;
+  sulphur_vents_5 [style=filled, fillcolor=lightblue];
   toxic_sewers_5;
 
+  academy_6 [style=filled, fillcolor=darkseagreen1];
   ashen_wood_6 [style=filled, fillcolor=darkseagreen1];
-  atoll_6;
+  atoll_6 [style=filled, fillcolor=lightblue];
   cemetary_6;
   fields_6;
   hallowed_ground_6;
@@ -51,27 +55,41 @@ graph {
   phantasmogoria_6 [style=filled, fillcolor=darkseagreen1];
   shaped_beach_6 [style=filled, fillcolor=lightblue];
   thicket_6 [style=filled, fillcolor=lightblue];
-  underground_sea_6;
+  underground_sea_6 [style=filled, fillcolor=lightblue];
   wharf_6;
 
   arachnid_nest_7;
   bazaar_7;
   bone_crypt_7 [style=filled, fillcolor=darkseagreen1];
+  caer_blaidd_7;
   coral_ruins_7;
   dunes_7 [style=filled, fillcolor=darkseagreen1];
+  gardens_7 [style=filled, fillcolor=darkseagreen1];
   lava_chambers_7;
   olmecs_sanctum_7;
   pillars_of_arun_7;
+  residence_7;
   ramparts_7;
+  tribunal_7;
+  underground_river_7;
 
+  armoury_8;
+  courtyard_8 [style=filled, fillcolor=lightblue];
+  geode_8;
   laboratory_8;
   mao_kun_8;
   mud_geyser_8;
   shaped_iceberg_8 [style=filled, fillcolor=darkseagreen1];
   shore_8;
+  vaal_pyramid_8;
+  vaults_of_atziri_8;
 
+  poorjoys_asylum_9;
+  temple_9;
   tower_9;
 
+  cowards_trial_10;
+  cursed_crypt_10;
   precinct_10;
 
   promenade_11;
@@ -85,26 +103,6 @@ graph {
       </table>>]
   }
 
-  subgraph cluster_02 {
-    UL_dungeon_1 -- flooded_mine_2;
-    flooded_mine_2 -- leyline_3;
-    flooded_mine_2 -- excavation_3;
-    flooded_mine_2 -- cells_3;
-    cells_3 -- grotto_4;
-    excavation_3 -- gorge_4;
-    excavation_3 -- grotto_4;
-    leyline_3 -- gorge_4;
-    gorge_4 -- channel_5;
-    gorge_4 -- sulphur_vents_5;
-    grotto_4 -- channel_5;
-    grotto_4 -- maze_5;
-    maze_5 -- underground_sea_6;
-    sulphur_vents_5 -- ashen_wood_6;
-    atoll_6 -- ramparts_7;
-    atoll_6 -- maelstrom_of_chaos_6;
-    underground_sea_6 -- ramparts_7;
-  }
-
   subgraph cluster_03 {
     UR_beach_1 -- desert_2;
     UR_beach_1 -- arid_lake_2;
@@ -116,31 +114,69 @@ graph {
     strand_4 -- ancient_city_5;
     strand_4 -- whakawairu_4;
     ancient_city_5 -- fields_6;
+    fields_6 -- residence_7;
+    residence_7 -- courtyard_8;
+    courtyard_8 -- vinktar_square_8;
+    courtyard_8 -- temple_9;
+    temple_9 -- poorjoys_asylum_9;
+    temple_9 -- cowards_trial_10;
+    temple_9 -- cursed_crypt_10;
+    cursed_crypt_10 -- cowards_trial_10;
   }
 
   subgraph cluster_04 {
     shaped_beach_6;
     shaped_iceberg_8;
+
     LL_graveyard_1 -- marshes_2;
+    UL_dungeon_1 -- flooded_mine_2;
+    flooded_mine_2 -- leyline_3;
+    flooded_mine_2 -- excavation_3;
+    flooded_mine_2 -- cells_3;
+    marshes_2 -- burial_chambers_3;
     marshes_2 -- springs_3;
+    cells_3 -- grotto_4;
+    excavation_3 -- gorge_4;
+    excavation_3 -- grotto_4;
+    leyline_3 -- gorge_4;
+    leyline_3 -- volcano_4;
     springs_3 -- chateau_4;
+    chateau_4 -- perandus_manor_4;
     chateau_4 -- relic_chambers_4;
     chateau_4 -- toxic_sewers_5;
+    gorge_4 -- channel_5;
+    gorge_4 -- sulphur_vents_5;
+    grotto_4 -- channel_5;
+    grotto_4 -- maze_5;
     relic_chambers_4 -- barrows_5;
+    relic_chambers_4 -- burial_chambers_3;
+    relic_chambers_4 -- chateau_4;
+    volcano_4 -- sulphur_vents_5;
     barrows_5 -- ashen_wood_6;
     barrows_5 -- cemetary_6;
+    barrows_5 -- relic_chambers_4;
     barrows_5 -- masoleum_6;
+    maze_5 -- underground_sea_6;
+    sulphur_vents_5 -- ashen_wood_6;
+    toxic_sewers_5 -- cemetary_6;
     toxic_sewers_5 -- phantasmogoria_6;
-    ashen_wood_6 -- lava_chambers_7;
+    ashen_wood_6 -- lava_chamber_7;
+    atoll_6 -- ramparts_7;
+    atoll_6 -- maelstrom_of_chaos_6;
     cemetary_6 -- bone_crypt_7;
     cemetary_6 -- hallowed_ground_6;
-    masoleum_6 -- lava_chambers_7;
+    mausoleum_6 -- lava_chamber_7;
     phantasmogoria_6 -- dunes_7;
+    underground_sea_6 -- ramparts_7;
+    underground_sea_6 -- underground_river_7;
+    bone_crypt_7 -- mud_geyser_8;
+    bone_crypt_7 -- olmecs_sanctum_7;
     dunes_7 -- mud_geyser_8;
     dunes_7 -- pillars_of_arun_7;
     dunes_7 -- shore_8;
-    bone_crypt_7 -- mud_geyser_8;
-    bone_crypt_7 -- olmecs_sanctum_7;
+    ramparts_7 -- armoury_8;
+    underground_river_7 -- caer_blaidd_7;
+    underground_river_7 -- geode_8;
     mao_kun_8 -- shore_8;
     shore_8 -- tower_9;
     tower_9 -- precinct_10;
@@ -155,19 +191,28 @@ graph {
     alleyways_2 -- port_3;
     pen_2 -- cage_3;
     arcade_3 -- courthouse_4;
+    cage_3 -- city_square_4;
     port_3 -- lighthouse_4;
     canyon_4 -- spider_lair_5;
+    city_square_4 -- conservatory_5;
+    city_square_4 -- haunted_mansion_5;
+    courthouse_4 -- haunted_mansion_5;
     courthouse_4 -- ivory_temple_5;
     lighthouse_4 -- ivory_temple_5;
+    conservatory_5 -- academy_6;
     ivory_temple_5 -- thicket_6;
     ivory_temple_5 -- wharf_6;
     spider_lair_5 -- fields_6;
     spider_lair_5 -- thicket_6;
     spider_lair_5 -- jungle_valley_6;
+    academy_6 -- gardens_7;
+    academy_6 -- tribunal_7;
     jungle_valley_6 -- coral_ruins_7;
     thicket_6 -- arachnid_nest_7;
     wharf_6 -- bazaar_7;
     bazaar_7 -- laboratory_8;
+    tribunal_7 -- vaal_pyramid_8;
+    vaal_pyramid_8 -- vaults_of_atziri_8;
   }
 
 }
