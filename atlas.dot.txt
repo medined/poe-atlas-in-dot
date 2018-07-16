@@ -90,10 +90,9 @@ graph {
   vaal_pyramid_8;
   vaults_of_atziri_8;
 
-  arena_9;
-  estuary_9;
+  arena_9 [style=filled, fillcolor=lightblue];
+  estuary_9 [style=filled, fillcolor=lightblue];
   moon_temple_9 [style=filled, fillcolor=lightblue];
-
   plateau_9;
   poorjoys_asylum_9;
   putrid_cloister_9;
@@ -111,10 +110,12 @@ graph {
   pier_10;
   precinct_10;
   shipyard_10;
+  wasteland_10;
 
   coves_11;
   lair_11;
   promenade_11;
+  spider_forest_11;
 
   castle_ruins_12;
   obas_cursed_trove_12;
@@ -253,7 +254,9 @@ graph {
     vaal_pyramid_8 -- vaults_of_atziri_8;
 
     arena_9 -- pier_10;
+    arena_9 -- wasteland_10;
     estuary_9 -- arachnid_tomb_10;
+    estuary_9 -- shipyard_10;
     moon_temple_9 -- belfry_10;
     moon_temple_9 -- the_twilight_temple_9;
     moon_temple_9 -- temple_9;
@@ -267,6 +270,7 @@ graph {
     vault_9 -- orchid_10;
     waste_pool_9 -- bog_10;
 
+    arachnid_tomb_10 -- spider_forest_11;
     bog_10 -- lair_11;
     cursed_crypt_10 -- cowards_trial_10;
     precinct_10 -- promenade_11;
@@ -275,6 +279,7 @@ graph {
     coves_11 -- castle_ruins_12;
     lair_11 -- racecourse_12;
     promenade_11 -- racecourse_12;
+    spider_forest_11 -- castle_ruins_12;
   }
 
 }
