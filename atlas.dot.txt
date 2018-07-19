@@ -93,11 +93,15 @@ graph {
   arena_9 [style=filled, fillcolor=lightblue];
   estuary_9 [style=filled, fillcolor=lightblue];
   moon_temple_9 [style=filled, fillcolor=lightblue];
+  museum_9;
   plateau_9;
   poorjoys_asylum_9;
   putrid_cloister_9;
+  scriptorium_9 [style=filled, fillcolor=lightblue];
   sepulchre_9;
+  shaped_chateau_9;
   temple_9;
+  the_putrid_cloister_9;
   tower_9;
   vault_9 [style=filled, fillcolor=lightblue];
   waste_pool_9;
@@ -109,6 +113,7 @@ graph {
   orchid_10;
   pier_10;
   precinct_10;
+  siege_10;
   shipyard_10;
   wasteland_10;
 
@@ -248,7 +253,9 @@ graph {
     mud_geyser_8 -- waste_pool_9;
     overgrown_ruin_8 -- vault_9;
     shore_8 -- tower_9;
+    laboratory_8 -- museum_9;
     laboratory_8 -- putrid_cloister_9;
+    laboratory_8 -- scriptorium_9;
     tropical_island_8 -- estuary_9;
     vaal_pyramid_8 -- estuary_9;
     vaal_pyramid_8 -- vaults_of_atziri_8;
@@ -260,6 +267,9 @@ graph {
     moon_temple_9 -- belfry_10;
     moon_temple_9 -- the_twilight_temple_9;
     moon_temple_9 -- temple_9;
+    museum_9 -- siege_10;
+    museum_9 -- the_putrid_cloister_9;
+    scriptorium_9 -- siege_10;
     sepulchre_9 -- belfry_10;
     sepulchre_9 -- orchid_10;
     temple_9 -- poorjoys_asylum_9;
