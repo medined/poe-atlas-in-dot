@@ -81,6 +81,7 @@ graph {
   geode_8 [style=filled, fillcolor=lightblue];
   infested_valley_8;
   laboratory_8;
+  mineral_pools_8 [style=filled, fillcolor=lightblue];
   mao_kun_8;
   mud_geyser_8 [style=filled, fillcolor=lightblue];
   overgrown_ruin_8;
