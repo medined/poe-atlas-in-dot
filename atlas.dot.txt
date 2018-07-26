@@ -62,21 +62,21 @@ graph {
   wharf_6 [style=filled, fillcolor=lightblue];
 
   arachnid_nest_7 [style=filled, fillcolor=lightblue];
-  bazaar_7;
+  bazaar_7 [style=filled, fillcolor=lightblue];
   bone_crypt_7 [style=filled, fillcolor=lightblue];
   caer_blaidd_7;
   coral_ruins_7 [style=filled, fillcolor=lightblue];
   dunes_7 [style=filled, fillcolor=lightblue];
   gardens_7 [style=filled, fillcolor=lightblue];
-  lava_chamber_7;
+  lava_chamber_7 [style=filled, fillcolor=lightblue];
   olmecs_sanctum_7;
   pillars_of_arun_7;
   ramparts_7 [style=filled, fillcolor=lightblue];
   residence_7 [style=filled, fillcolor=lightblue];
-  tribunal_7;
+  tribunal_7 [style=filled, fillcolor=lightblue];
   underground_river_7 [style=filled, fillcolor=lightblue];
 
-  armoury_8;
+  armoury_8 [style=filled, fillcolor=lightblue];
   courtyard_8 [style=filled, fillcolor=lightblue];
   geode_8 [style=filled, fillcolor=lightblue];
   infested_valley_8;
