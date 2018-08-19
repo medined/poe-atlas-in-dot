@@ -1,6 +1,6 @@
 graph {
   UL_dungeon_1 [shape=box, style=filled, fillcolor=lightblue];
-  UR_beach_1  [shape=box, style=filled, fillcolor=lightblue];
+  UR_beach_1  [shape=box, style=filled, fillcolor=lightblue, peripheries=2];
   LL_graveyard_1 [shape=box, style=filled, fillcolor=lightblue];
   LR_lookout_1 [shape=box, style=filled, fillcolor=lightblue];
   {rank = same; UL_dungeon_1; UR_beach_1; LL_graveyard_1; LR_lookout_1;}
@@ -51,12 +51,11 @@ graph {
   atoll_6 [style=filled, fillcolor=lightblue];
   cemetary_6 [style=filled, fillcolor=lightblue];
   fields_6 [style=filled, fillcolor=lightblue];
-  hallowed_ground_6;
+  hallowed_ground_6 [style=filled, fillcolor=lightblue];
   jungle_valley_6 [style=filled, fillcolor=lightblue];
   mausoleum_6 [style=filled, fillcolor=lightblue];
   maelstrom_of_chaos_6;
   phantasmogoria_6 [style=filled, fillcolor=lightblue];
-  shaped_beach_6 [style=filled, fillcolor=lightblue];
   thicket_6 [style=filled, fillcolor=lightblue];
   underground_sea_6 [style=filled, fillcolor=lightblue];
   wharf_6 [style=filled, fillcolor=lightblue];
@@ -69,7 +68,7 @@ graph {
   dunes_7 [style=filled, fillcolor=lightblue];
   gardens_7 [style=filled, fillcolor=lightblue];
   lava_chamber_7 [style=filled, fillcolor=lightblue];
-  olmecs_sanctum_7;
+  olmecs_sanctum_7 [style=filled, fillcolor=lightblue];
   pillars_of_arun_7;
   ramparts_7 [style=filled, fillcolor=lightblue];
   residence_7 [style=filled, fillcolor=lightblue];
@@ -80,53 +79,73 @@ graph {
   courtyard_8 [style=filled, fillcolor=lightblue];
   geode_8 [style=filled, fillcolor=lightblue];
   infested_valley_8;
-  laboratory_8;
+  laboratory_8 [style=filled, fillcolor=lightblue];
   mineral_pools_8 [style=filled, fillcolor=lightblue];
   mao_kun_8;
   mud_geyser_8 [style=filled, fillcolor=lightblue];
-  overgrown_ruin_8;
-  shaped_iceberg_8 [style=filled, fillcolor=darkseagreen1];
-  shore_8;
+  overgrown_ruin_8 [style=filled, fillcolor=lightblue];
+  shore_8 [style=filled, fillcolor=lightblue];
   tropical_island_8 [style=filled, fillcolor=lightblue];
-  vaal_pyramid_8;
+  vaal_pyramid_8 [style=filled, fillcolor=lightblue];
   vaults_of_atziri_8;
 
   arena_9 [style=filled, fillcolor=lightblue];
   estuary_9 [style=filled, fillcolor=lightblue];
   moon_temple_9 [style=filled, fillcolor=lightblue];
-  museum_9;
-  plateau_9;
-  poorjoys_asylum_9;
+  museum_9 [style=filled, fillcolor=lightblue];
+  plateau_9 [style=filled, fillcolor=lightblue];
+  poorjoys_asylum_9 [style=filled, fillcolor=lightblue];
   putrid_cloister_9;
   scriptorium_9 [style=filled, fillcolor=lightblue];
-  sepulchre_9;
-  shaped_chateau_9;
-  temple_9;
+  sepulchre_9 [style=filled, fillcolor=lightblue];
+  temple_9 [style=filled, fillcolor=lightblue];
   the_putrid_cloister_9;
-  tower_9;
+  tower_9 [style=filled, fillcolor=lightblue];
   vault_9 [style=filled, fillcolor=lightblue];
   waste_pool_9;
 
   arachnid_tomb_10;
+  belfry_10 [style=filled, fillcolor=lightblue];
   bog_10;
   cowards_trial_10;
-  cursed_crypt_10;
+  cursed_crypt_10 [style=filled, fillcolor=lightblue];
   orchid_10;
-  pier_10;
-  precinct_10;
-  siege_10;
-  shipyard_10;
-  wasteland_10;
+  pier_10 [style=filled, fillcolor=lightblue];
+  precinct_10; //four tough archer bosses
+  shipyard_10 [style=filled, fillcolor=lightblue];
+  siege_10; // tough boss
+  wasteland_10 [style=filled, fillcolor=lightblue];
 
+  //colonnade_11;
   coves_11;
+  factory_11;
   lair_11;
+  //mesa_11;
+  pit_11 [style=filled, fillcolor=lightblue];
+  //primordial_pool_11;
   promenade_11;
   spider_forest_11;
+  waterways_map_11;
 
   castle_ruins_12;
+  //crystal_ore_12;
+  death_and_taxes_12 [style=filled, fillcolor=lightblue];
+  //defiled_cathedral_12;
+  //necropolis_12;
   obas_cursed_trove_12;
+  overgrown_shrine_12;
   racecourse_12;
+  summit_12 [style=filled, fillcolor=green];
   torture_chamber_12;
+  villa_12;
+
+  core_13 [style=filled, fillcolor=lightblue];
+  park_13;
+
+  //crimson_temple_14;
+  //plaza_14;
+
+  //sunken_city_15;
 
   subgraph cluster_01 {
     node [shape=plaintext]
@@ -134,13 +153,11 @@ graph {
     key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
       <tr><td align="right" port="i1">Blue - Bonus Complete</td></tr>
       <tr><td align="right" port="i2">Green - Complete</td></tr>
+      <tr><td align="right" port="i2">Double - Shaped</td></tr>
       </table>>]
   }
 
   subgraph cluster_04 {
-    shaped_beach_6;
-    shaped_iceberg_8;
-
     LL_graveyard_1 -- marshes_2;
     LR_lookout_1 -- alleyways_2;
     LR_lookout_1 -- pen_2;
@@ -249,10 +266,12 @@ graph {
     courtyard_8 -- temple_9;
     geode_8 -- sepulchre_9;
     geode_8 -- vault_9;
+    infested_valley_8 -- plateau_9;
     mao_kun_8 -- shore_8;
     mineral_pools_8 -- moon_temple_9;
     mud_geyser_8 -- waste_pool_9;
     overgrown_ruin_8 -- vault_9;
+    overgrown_ruin_8 -- waste_pool_9;
     shore_8 -- tower_9;
     laboratory_8 -- museum_9;
     laboratory_8 -- putrid_cloister_9;
@@ -270,6 +289,7 @@ graph {
     moon_temple_9 -- temple_9;
     museum_9 -- siege_10;
     museum_9 -- the_putrid_cloister_9;
+    plateau_9 -- wasteland_10;
     scriptorium_9 -- siege_10;
     sepulchre_9 -- belfry_10;
     sepulchre_9 -- orchid_10;
@@ -282,15 +302,38 @@ graph {
     waste_pool_9 -- bog_10;
 
     arachnid_tomb_10 -- spider_forest_11;
+    belfry_10 -- waterways_map_11;
     bog_10 -- lair_11;
+    bog_10 -- primordial_pool_11;
     cursed_crypt_10 -- cowards_trial_10;
+    cursed_crypt_10 -- cowards_trial_10;
+    orchid_10 -- mesa_11;
+    pier_10 -- pit_11;
     precinct_10 -- promenade_11;
     shipyard_10 -- coves_11;
+    wasteland_10 -- factory_11;
+    wasteland_10 -- pit_11;
 
     coves_11 -- castle_ruins_12;
+    factory_11 --villa_12;
     lair_11 -- racecourse_12;
+    mesa_11 -- overgrown_shrine_12;
+    pit_11 -- overgrown_shrine_12;
+    pit_11 -- villa_12;
+    primordial_pool_11 -- summit_12;
     promenade_11 -- racecourse_12;
     spider_forest_11 -- castle_ruins_12;
+    waterways_map_11 -- torture_chamber_12;
+
+    death_and_taxes_12 -- necropolis_12;
+    summit_12 -- core_13;
+    torture_chamber_12 -- malformation_map_13;
+    torture_chamber_12 -- obas_cursed_trove_12;
+    villa_12 -- park_13;
+
+    core_13 -- plaza_14;
+
+    plaza_14 -- sunken_city_15;
   }
 
 }
